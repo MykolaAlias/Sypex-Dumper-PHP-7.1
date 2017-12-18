@@ -125,7 +125,7 @@ class SypexDumper
                 }
             }
             $this->cron_mode = true;
-            set_time_limit($CFG['time_cron']);
+            set_time_limit((int)$CFG['time_cron']);
             // Загружаем конфиг файл, если нужно
             $auth = $this->connect();
             if ($auth && !empty($this->CFG['sjob'])) {
